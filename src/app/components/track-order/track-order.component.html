@@ -1,6 +1,8 @@
 <div class="container">
     <div class="card">
-        <h5>Hello {{currentUser.fullname}}, Your Food will be delivered within 30 minutes</h5>
+        <h5 *ngIf="!singleOrder">Hello {{currentUser.fullname}}, There are no current orders</h5>
+
+        <h5 *ngIf="singleOrder">Hello {{currentUser.fullname}}, Your Food will be delivered within 30 minutes</h5>
         <h5 *ngIf="singleOrder">Item: {{dishName | titlecase}}</h5>
         <p *ngIf="singleOrder">Description: {{description | titlecase}}</p>
         <h5 *ngIf="secondOrder">Item: {{dishName2 | titlecase}}</h5>
