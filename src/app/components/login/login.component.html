@@ -1,0 +1,58 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="sec-light">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-3">Welcome Your Food!!</h1>
+                    <p class="lead">SINCE 1987</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="card bg-light">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+        <h4 class="card-title mt-3 text-center">Please Login</h4>
+        <form [formGroup]="loginForm" name="loginForm" (ngSubmit)="onSubmit()" >
+        
+        
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+             </div>
+             <input formControlName="email" name="email" type="email" class="form-control" id="inputEmail4" placeholder="Email"   required email  
+             [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+             <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                 <div *ngIf="f.email.errors.required">Email is required</div>
+                 <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+             </div>
+            </div> <!-- form-group// -->
+        
+        
+       
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+            </div>
+            <input formControlName="password" name="password" type="password" class="form-control" id="password" placeholder="Password" required [autocomplete]="false" 
+            [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required">Password is required</div>
+                                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                            </div>
+        </div> <!-- form-group// --> 
+                                          
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block"> Log In  </button>
+        </div> <!-- form-group// -->      
+    </form>
+    </article>
+    </div> 
+    </div> 
+    
+    <!--container end.//-->
+    
+    

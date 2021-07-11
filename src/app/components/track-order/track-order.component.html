@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="card">
+        <h5>Hello {{currentUser.fullname}}, Your Food will be delivered within 30 minutes</h5>
+        <h5 *ngIf="singleOrder">Item: {{dishName | titlecase}}</h5>
+        <p *ngIf="singleOrder">Description: {{description | titlecase}}</p>
+        <h5 *ngIf="secondOrder">Item: {{dishName2 | titlecase}}</h5>
+        <p *ngIf="secondOrder">Description: {{description2 | titlecase}}</p>
+        <h5 *ngIf="thirdOrder">Item: {{dishName3 | titlecase}}</h5>
+        <p *ngIf="thirdOrder">Description: {{description3 | titlecase}}</p>
+        
+    </div>
+</div>

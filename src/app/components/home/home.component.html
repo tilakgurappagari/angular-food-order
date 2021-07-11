@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-dark bg-dark">
+
+        <div class="container">
+          <a class="navbar-brand" routerLink="/home/food">ORDER FOOD </a>
+      
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/home/cart">Cart</a>
+            </li>
+        
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-user">{{currentUser.fullname}}</i> </span>
+               </div>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" routerLink="/home/track-order">Track Order</a>
+                <a class="dropdown-item" routerLink="/home/profile">Profile</a>
+                <a class="dropdown-item" routerLink="/home/settings">Settings</a>
+                <a class="dropdown-item" routerLink="/Logout">Logout</a>
+              </div>
+            </li>
+            
+           
+          </ul>
+        </div>
+      </nav>
+      <router-outlet></router-outlet>
+
+</div>

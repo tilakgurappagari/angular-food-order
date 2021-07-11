@@ -1,0 +1,59 @@
+.searchWrapper{
+    margin: 5px;
+}
+.form-control:focus {
+    box-shadow: none;
+  }
+  
+  .form-control-underlined {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    padding-left: 0;
+    
+  }
+  .form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+  }
+  img{
+
+    height:120px;
+
+    width:auto;
+
+}
+
+.border{
+    margin:10px;
+}
+
+
+.btnCenter{
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 54%;
+    ;
+}
+.cartButton{
+    background-color: #72A75F;
+
+}
+.orderButton{
+    background-color: #4C5A5E;
+}
+div.box {
+    text-align: center;
+    border-radius: 7px;
+    background-color: #464852;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15),
+      0 2px 3px 0 rgba(0,0,0,.1);
+    color: whitesmoke;
+  }
+  .modalFormWrapper{
+    padding: 2rem;
+}
+
