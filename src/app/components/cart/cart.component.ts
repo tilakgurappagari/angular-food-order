@@ -8,12 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  public cartItems: foodItem[] = [];
+  public cartItems: any[] = [];
   public errorItem: boolean = false;
   public dishName2: any = null;
   public description2: any = null;
+  public restaurant2: any = null;
   public dishName3: any = null;
   public description3: any = null;
+  public restaurant3: any = null;
 
   constructor(
     private CartService: CartService, 
@@ -52,20 +54,27 @@ export class CartComponent implements OnInit {
         if(this.cartItems[1]){
           this.dishName2 = this.cartItems[1].dishName;
           this.description2 = this.cartItems[1].description;
+          this.restaurant2 = this.cartItems[1].restaurant
         }
         if(this.cartItems[2]){
           this.dishName3 = this.cartItems[2].dishName;
           this.description3 = this.cartItems[2].description;
+          this.restaurant3 = this.cartItems[2].restaurant
+
         }
         this.router.navigate(['/home/track-order'],
         {
           queryParams:{
             dishName:  this.cartItems[0].dishName,
             description: this.cartItems[0].description,
+            restaurant: this.cartItems[0].restaurant,
             dishName2 : this.dishName2,
             description2: this.description2,
+            restaurant2: this.restaurant2,
             dishName3 : this.dishName3,
             description3: this.description3,
+            restaurant3: this.restaurant3,
+
 
           },
       

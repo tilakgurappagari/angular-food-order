@@ -15,10 +15,14 @@ export class TrackOrderComponent implements OnInit {
   currentUserSubscription: Subscription;
   public dishName: any;
   public description: any;
+  public restaurant: any;
   public dishName2: any;
   public description2: any;
   public dishName3: any;
   public description3: any;
+  public restaurant2: any;
+  public restaurant3: any;
+
   public singleOrder: boolean = false;
   public secondOrder: boolean = false;
   public thirdOrder: boolean = false;
@@ -38,10 +42,13 @@ export class TrackOrderComponent implements OnInit {
         this.activatedRoute.queryParamMap.subscribe((params)=>{
           this.dishName = params.get('dishName');
           this.description = params.get('description');
+          this.restaurant = params.get('restaurant');
           this.dishName2 = params.get('dishName2');
           this.description2 = params.get('description2');
           this.dishName3 = params.get('dishName3');
           this.description3 = params.get('description3');
+          this.restaurant2 = params.get('restaurant2');
+          this.restaurant3 = params.get('restaurant3');
         })
         if(this.dishName != null){
           this.singleOrder= true;

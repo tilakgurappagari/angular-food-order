@@ -3,12 +3,25 @@
         <h5 *ngIf="!singleOrder">Hello {{currentUser.fullname}}, There are no current orders</h5>
 
         <h5 *ngIf="singleOrder">Hello {{currentUser.fullname}}, Your Food will be delivered within 30 minutes</h5>
-        <h5 *ngIf="singleOrder">Item: {{dishName | titlecase}}</h5>
-        <p *ngIf="singleOrder">Description: {{description | titlecase}}</p>
-        <h5 *ngIf="secondOrder">Item: {{dishName2 | titlecase}}</h5>
-        <p *ngIf="secondOrder">Description: {{description2 | titlecase}}</p>
-        <h5 *ngIf="thirdOrder">Item: {{dishName3 | titlecase}}</h5>
-        <p *ngIf="thirdOrder">Description: {{description3 | titlecase}}</p>
-        
+    <div *ngIf="singleOrder">
+        <hr>
+        <h5 >Item: {{dishName | titlecase}}</h5> 
+         <p>Restaurant: {{restaurant | titlecase}}</p>
+        <p >Description: {{description | titlecase}}</p>
+        <hr>
+    </div>
+      <div *ngIf="secondOrder">
+        <h5 >Item: {{dishName2 | titlecase}}</h5>
+        <p >Restaurant: {{restaurant2 | titlecase}}</p>
+        <p >Description: {{description2 | titlecase}}</p>
+        <hr>
+      </div>
+
+       <div *ngIf="thirdOrder">
+        <h5 >Item: {{dishName3 | titlecase}}</h5>
+        <p >Restaurant: {{restaurant3 | titlecase}}</p>
+        <p >Description: {{description3 | titlecase}}</p>
+        <hr>
+       </div>
     </div>
 </div>

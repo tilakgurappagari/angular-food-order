@@ -18,7 +18,7 @@ export class FoodComponent implements OnInit, OnDestroy {
   public errorItem: boolean = false;
   public searchText:string = '';
   public currentUserSubscription: Subscription;
-  public foodItemTobeAddedInCart:foodItem ={} as foodItem;
+  public foodItemTobeAddedInCart:any ={};
   constructor(
     private alertService: AlertService,
     private authenticationService: AuthenticationService,
@@ -75,13 +75,12 @@ export class FoodComponent implements OnInit, OnDestroy {
   public placeOrder():void{
     this.CartService.placeOrder([this.foodItemTobeAddedInCart]).subscribe(
       data => {
-        console.log("from food component placeOrder method");
-        console.log(data);
         this.alertService.success('Order Placed SuccessFully', true);
         this.router.navigate(['/home/track-order'],  {
           queryParams:{
             dishName:  this.foodItemTobeAddedInCart.dishName,
-            description: this.foodItemTobeAddedInCart.description
+            description: this.foodItemTobeAddedInCart.description,
+            restaurant: this.foodItemTobeAddedInCart.restaurant
           }
         }
         
