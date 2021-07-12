@@ -67,15 +67,14 @@ export class AddressComponent implements OnInit {
    
   }
 
-  editAddress(index:number){
-    this.f.name.setValue(this.addressList[index].name);
-    this.f.address.setValue(this.addressList[index].address);
-    this.enterAddressArea= true;
+  // editAddress(index:number){
+  //   this.f.name.setValue(this.addressList[index].name);
+  //   this.f.address.setValue(this.addressList[index].address);
+  //   this.enterAddressArea= true;
 
-  }
+  // }
   onSubmit() {
     this.submitted = true;
-    console.log(this.addressForm.valid);
     if(this.addressForm.valid){
       this.enterAddressArea= false;
       this.addAddress();
