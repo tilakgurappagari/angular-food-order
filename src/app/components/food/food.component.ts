@@ -85,7 +85,6 @@ export class FoodComponent implements OnInit, OnDestroy {
         }
         
         );
-        console.log(this.foodItemTobeAddedInCart);
         this.CartService.emptyCart();
       },
       error => {

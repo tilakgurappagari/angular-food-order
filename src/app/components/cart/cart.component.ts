@@ -85,7 +85,6 @@ export class CartComponent implements OnInit {
       },
       error => {
         this.alertService.error(error);
-        console.log("hello");
       });
   }
 
